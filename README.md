@@ -9,9 +9,9 @@
 
 | Nome | Responsabilidade |
 |------|------------------|
-| **Bruna França Martinez** | Criação do front-end, API e banco de dados |
+| **Bruna França Martinez** | Criação do front-end, Lambda e banco de dados |
 | **Gabriela Nellessen de Sousa** | Criação da VPC e desenvolvimento do backend |
-| **Isadora Caetano Brandão de Sousa** | Documentação e auxílio na criação da API |
+| **Isadora Caetano Brandão de Sousa** | Documentação e a criação da API |
 | **Letícia Santiago da Silva** | Desenvolvimento do backend e configuração da instância EC2 |
 
 ---
