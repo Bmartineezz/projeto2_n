@@ -21,5 +21,7 @@ public class Avaliacao {
 
     private String comentario;
 
-    // Getters e Setters
+    @ManyToOne
+    private Usuario usuario;
+
 }

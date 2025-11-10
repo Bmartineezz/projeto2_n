@@ -1,21 +1,16 @@
 package projeto.projeto_nuvem.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.stereotype.Controller; // Use @Controller
 import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.RestController; <- REMOVA esta importação
 
-
-@Controller
-@RequestMapping("/")
-
-
+@Controller // AGORA É @Controller
 public class HomeController {
 
-    @GetMapping
-    public String home(){
-        return "home";
+    // Mapeia requisições GET para a raiz da aplicação (http://localhost:8080/)
+    @GetMapping("/")
+    public String home() {
+        // Retorna o nome do arquivo de template (o Spring procurará por 'templates/home.html')
+        return "home"; 
     }
-    
 }

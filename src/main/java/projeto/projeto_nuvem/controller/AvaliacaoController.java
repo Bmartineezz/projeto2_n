@@ -9,7 +9,7 @@ import projeto.projeto_nuvem.Avaliacao;
 import projeto.projeto_nuvem.Filme;
 
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

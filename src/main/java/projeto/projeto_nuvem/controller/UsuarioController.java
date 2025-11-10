@@ -6,14 +6,15 @@ import projeto.projeto_nuvem.dto.UsuarioRequestDto;
 import projeto.projeto_nuvem.dto.UsuarioResponseDto;
 import projeto.projeto_nuvem.Usuario;
 import projeto.projeto_nuvem.service.UsuarioService;
-
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuarios")
+
+
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
@@ -42,6 +43,33 @@ public class UsuarioController {
     public ResponseEntity<UsuarioResponseDto> criarUsuario(@Valid @RequestBody UsuarioRequestDto dto) {
         Usuario usuario = toEntity(dto);
         Usuario salvo = usuarioService.salvar(usuario);
+        return ResponseEntity.ok(toResponseDTO(salvo));
+    }
+
+    // UPDATE: Atualizar um usuário existente
+    @PutMapping("/{id}")
+    public ResponseEntity<UsuarioResponseDto> atualizarUsuario(
+            @PathVariable Long id,
+            @Valid @RequestBody UsuarioRequestDto dto) {
+        
+        // 1. Buscar o usuário existente pelo ID
+        Optional<Usuario> usuarioOpt = usuarioService.buscarPorId(id);
+
+        if (usuarioOpt.isEmpty()) {
+            // Se o usuário não for encontrado, retorna 404 Not Found
+            return ResponseEntity.notFound().build();
+        }
+        
+        // 2. Atualizar os dados do usuário existente
+        Usuario usuarioExistente = usuarioOpt.get();
+        usuarioExistente.setNome(dto.getNome());
+        usuarioExistente.setEmail(dto.getEmail());
+        // O ID original é mantido
+
+        // 3. Salvar (atualizar) o usuário no serviço
+        Usuario salvo = usuarioService.salvar(usuarioExistente); 
+        
+        // 4. Retornar a resposta de sucesso (200 OK)
         return ResponseEntity.ok(toResponseDTO(salvo));
     }
 
