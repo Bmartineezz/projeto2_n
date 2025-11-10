@@ -6,6 +6,10 @@ import projeto.projeto_nuvem.dto.UsuarioRequestDto;
 import projeto.projeto_nuvem.dto.UsuarioResponseDto;
 import projeto.projeto_nuvem.Usuario;
 import projeto.projeto_nuvem.service.UsuarioService;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cff9082d6621641ece4e7e740721cfb35994c672
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Optional;
@@ -77,6 +81,11 @@ public class UsuarioController {
     public ResponseEntity<Void> deletarUsuario(@PathVariable Long id) {
         usuarioService.deletar(id);
         return ResponseEntity.noContent().build();
+    }
+    @PutMapping("/{id}")
+    public void atualizarUsuario(@PathVariable Long id, @RequestBody UsuarioRequestDto dto) {
+        Usuario usuario = toEntity(dto); // Converte o DTO para entidade
+        usuarioService.atualizar(id, usuario);
     }
 
     // Conversão manual entre DTO e entidade

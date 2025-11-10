@@ -1,6 +1,6 @@
-# Projeto Integrador – Cloud Developing 2025/1  
+# Projeto Integrador – Cloud Developing 2025/1
 
-> Aplicação CRUD simples com **API REST**, **EC2**, **RDS**, **VPC** e **AWS Lambda**.  
+> Aplicação CRUD simples com **API REST**, **EC2**, **RDS**, **VPC** e **AWS Lambda**.
 > Projeto desenvolvido na disciplina **Serviços em Nuvem**.
 
 ---
@@ -18,7 +18,7 @@
 
 ## 1. Visão Geral
 
-Este projeto implementa uma aplicação web completa de avaliação de filmes utilizando arquitetura moderna em nuvem AWS. O sistema permite que usuários cadastrem filmes, 
+Este projeto implementa uma aplicação web completa de avaliação de filmes utilizando arquitetura moderna em nuvem AWS. O sistema permite que usuários cadastrem filmes,
 criem avaliações com notas (1-5 estrelas) e comentários, além de gerenciar perfis de usuários.
 
 ## 1.1 Domínio de Negócio
@@ -50,13 +50,13 @@ Facilidade de validação de funcionalidades
 
 ### Resumo da Configuração
 
-- **Banco de dados:** `jdbc:postgresql://projeto-nuvem-bd.c5ctnoflyhee.us-east-1.rds.amazonaws.com:5432/postgres`  
-- **Porta:** `5432`  
-- **Região:** `us-east-1`  
-- **VPC:** `projeto_nuvem-vpc`  
-- **Sub-redes privadas:** `projeto_nuvem-subnet-private1-us-east-1a` e `projeto_nuvem-subnet-private2-us-east-1b` 
-- **Acesso:** Somente EC2 tem permissão para acessar o RDS  
-- **Publicamente acessível:** Não  
+- **Banco de dados:** `jdbc:postgresql://projeto-nuvem-bd.c5ctnoflyhee.us-east-1.rds.amazonaws.com:5432/postgres`
+- **Porta:** `5432`
+- **Região:** `us-east-1`
+- **VPC:** `projeto_nuvem-vpc`
+- **Sub-redes privadas:** `projeto_nuvem-subnet-private1-us-east-1a` e `projeto_nuvem-subnet-private2-us-east-1b`
+- **Acesso:** Somente EC2 tem permissão para acessar o RDS
+- **Publicamente acessível:** Não
 - **Segurança:** Controlada via Security Groups
 
 ---
