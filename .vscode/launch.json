@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjetoNuvemApplication<projeto_nuvem>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "projeto.projeto_nuvem.ProjetoNuvemApplication",
+            "projectName": "projeto_nuvem",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

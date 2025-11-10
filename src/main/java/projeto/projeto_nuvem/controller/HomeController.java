@@ -11,6 +11,6 @@ public class HomeController {
     @GetMapping("/")
     public String home() {
         // Retorna o nome do arquivo de template (o Spring procurará por 'templates/home.html')
-        return "home"; 
+        return "home";
     }
 }

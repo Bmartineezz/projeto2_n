@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Serviços nuvem</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<h1> Serviços nuvem</h1>
+
+    <div class="container">
+        <h1>Gerenciamento de Usuários</h1>
+
+        <div class="form-container">
+            <h2>Cadastrar/Editar Usuário</h2>
+            <form id="usuarioForm">
+                <input type="hidden" id="usuarioId" value="">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <button type="submit" id="submitButton">Cadastrar</button>
+                <button type="button" id="cancelButton" style="display: none;">Cancelar Edição</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h2>Lista de Usuários</h2>
+            <table id="usuariosTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <p id="loadingMessage">Carregando usuários...</p>
+        </div>
+    </div>
+
+<script type="text/javascript" th:src="@{/js/app.js}"></script>
 </body>
 </html>
